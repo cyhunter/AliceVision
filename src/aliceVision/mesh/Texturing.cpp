@@ -179,7 +179,7 @@ void Texturing::generateUVs(mvsUtils::MultiViewParams& mp)
                         {
                             // compute the final pixel coordinates
                             uvPix = (pix + Point2d(offset.x, offset.y)) / (float)mua.textureSide();
-                            if(useUDIM)
+                            if(texParams.useUDIM)
                               uvPix.x += atlasId;
                             uvPix.y = 1.0 - uvPix.y;
                             if(uvPix.x >= mua.textureSide() || uvPix.y >= mua.textureSide())
